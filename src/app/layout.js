@@ -12,14 +12,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body suppressHydrationWarning>
+    <html lang="en" className="preloading">
+      <body suppressHydrationWarning className="preloading">
         <BootstrapForBrowser />
         <Preloader />
-        <Header />
-        {children}
-        <CallToAction />
-        <Footer />
+        <div className="app-shell">
+          <Header />
+          {children}
+          <CallToAction />
+          <Footer />
+        </div>
       </body>
     </html>
   );

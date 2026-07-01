@@ -57,9 +57,7 @@ const Card = ({ year, title, institution }) => {
                     <span className="company">
                         {isEmail ? (
                             <a
-                                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${institution.trim()}`}
-                                target="_blank"
-                                rel="noreferrer"
+                                href={`mailto:${institution.trim()}`}
                                 className="company-email"
                             >
                                 {institution}
